@@ -3,20 +3,20 @@
     padding: 0; margin: 0;
 }
 body {
-    background-color: #eee;
+    background-color: #fff;
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
     user-select: none;
 }
 canvas {
-    background: #eee;
+    background: #000;
     display: block;
     margin: 0 auto;
 }
 
 /* ---------------------------- Menu ---------------------------- */
 
-.hauptmenu {
+.headmenu {
     display: block;
     position: absolute;
     top: 0%;
@@ -27,7 +27,7 @@ canvas {
     transition: all 0.9s ease-out;
 }
 
-.hauptmenu-fadeOut {
+.headmenu-fadeOut {
     top: -100%;
     opacity: 0;
     visibility: hidden;
@@ -65,19 +65,7 @@ canvas {
     visibility: visible;
 }
 
-.specialmenu {
-    display: block;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.6s ease-out;
-}
-
-.specialmenu-fadeIn {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* ---------------------------- Button Reihe ---------------------------- */
+/* ---------------------------- Button Row ---------------------------- */
 
 .button-row {
     display: flex;
@@ -85,12 +73,12 @@ canvas {
     justify-content: center;
     align-items: center;
     width: 100%;
-    align-content: center; /*optional -> lines*/
+    align-content: center;
     position: absolute;
     top: 67%;
 }
 
-/* ---------------------------- Button Elemente ---------------------------- */
+/* ---------------------------- Button ---------------------------- */
 
 .button-row div {
     display: flex;
@@ -115,58 +103,7 @@ canvas {
     transform: scale(1.1);
 }
 
-/* ---------------------------- InGame winns ---------------------------- */
 
-.multiplayerDiv {
-    position: absolute;
-    bottom: 20px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
-    width: 80%;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-.multiplayerDiv div:first-of-type .svgBall {
-    transform: rotate(30deg);
-}
-
-.multiplayerDiv div:last-of-type .svgBall { /* display none ist im Weg */
-    transform: rotate(-30deg);
-}
-
-.rotateLeft {
-    transform: rotate(-30deg);
-}
-
-.feld {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.svgBall {
-    width: 70px;
-    height: 70px;
-    margin-top: 12px;
-    margin-bottom: 6px;
-}
-
-.name {
-    color: #333;
-    font-size: 26px;
-    font-weight: 300;
-}
-
-.winns {
-    color: #555;
-    font-size: 34px;
-    font-weight: 400;
-}
 
 /* ---------------------------- Logo ---------------------------- */
 
@@ -178,11 +115,11 @@ canvas {
     left: 0;
     right: 0;
     margin: auto;
-    animation: drehung 22s linear infinite;
+    animation: rotate 22s linear infinite;
     /*transform-origin: 50% 50%;*/
 }
 
-@keyframes drehung {
+@keyframes rotate {
     0% {
         transform: rotate(0);
     }
@@ -191,36 +128,9 @@ canvas {
     }
 }
 
-/* ---------------------------- Game Over Back Button ---------------------------- */
+/* ---------------------------- Text ---------------------------- */
 
-.buttonBack {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 42px;
-    background-color: #0095DD;
-    margin: 20px 20px;
-    border-radius: 2px;
-    position: absolute;
-    top: 0%;
-    transition: all 0.6s ease-out;
-}
-
-.buttonBack p {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.buttonBack:hover {
-    background-color: #4682b4;
-    transform: scale(1.1);
-}
-
-/* ---------------------------- Texte ---------------------------- */
-
-.texte-row h1 {
+.text-row h1 {
     position: absolute;
     left: 0;
     right: 0;
@@ -233,7 +143,7 @@ canvas {
     top: 42%;
     font-size: 50px;
     font-weight: 500;
-    color: rgb(0, 149, 221);
+    color: rgb(255, 255, 255);
 }
 .text1:hover {
     font-size: 54px;
@@ -243,7 +153,7 @@ canvas {
     top: 52%;
     font-size: 30px;
     font-weight: 300;
-    color: rgb(68, 68, 68);
+    color: rgb(255, 255, 255);
 }
 .text2:hover {
     font-size: 34px;
@@ -253,19 +163,19 @@ canvas {
     top: 78%;
     font-size: 32px;
     font-weight: 100;
-    color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
 }
 .text3:hover {
     font-size: 34px;
 }
 
-/* ---------------------------- HighScore & Winner - Game Over ---------------------------- */
+/* ---------------------------- HighScore - Game Over ---------------------------- */
 
 .textHighScore {
     top: 17%;
     font-size: 36px;
     font-weight: 500;
-    color: #555;
+    color: #fff;
     opacity: 0;
     visibility: hidden;
 }
@@ -273,15 +183,15 @@ canvas {
 .textHighScore-fadeIn {
     opacity: 1;
     visibility: visible;
-    animation: pulsieren 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite; /*ease-in-out*/
+    animation: pulsation 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite; /*ease-in-out*/
 }
 .textHighScore-bottom {
     top: 63%;
     font-size: 30px;
-    animation: pulsieren 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 2s;
+    animation: pulsation 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 2s;
 }
 
-@keyframes pulsieren {
+@keyframes pulsation {
     0% {
         transform: scale(1);
     }
@@ -293,17 +203,17 @@ canvas {
     }
 }
 
-/* ---------------------------- Punkte InGame ---------------------------- */
+/* ---------------------------- Score InGame ---------------------------- */
 
-.punktzahlDiv {
+.scoreDiv {
     position: absolute;
     top: 0%;
     right: 0%;
     padding: 16px 30px;
 }
 
-.punktzahlDiv p {
-    color: rgb(51, 51, 51);
+.scoreDiv p {
+    color: rgb(255, 255, 255);
     text-align: right;
 }
 

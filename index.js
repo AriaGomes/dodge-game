@@ -8,7 +8,7 @@ const canvas = selectID("myCanvas");
 const ctx = canvas.getContext("2d");
 const button1 = selectID("button1");
 const buttonBack = selectID("buttonBack");
-const hauptmenu = selectID("hauptmenu");
+const headmenu = selectID("headmenu");
 const gameovermenu = selectID("gameovermenu");
 const ingame = selectID("ingame");
 const pointsSpan = selectID("pointsSpan");
@@ -127,7 +127,7 @@ class Game {
 
             this.player = player;
             this.loop();
-            hauptmenu.classList.add("hauptmenu-fadeOut");
+            headmenu.classList.add("headmenu-fadeOut");
             ingame.classList.add("ingame-fadeIn");
         }
     }
@@ -173,7 +173,7 @@ class Game {
         if (this.buttonStart) {
             this.buttonStart = false;
             this.classAddRemove();
-            hauptmenu.classList.remove("hauptmenu-fadeOut");
+            headmenu.classList.remove("headmenu-fadeOut");
         }
     }
     classAddRemove() {
@@ -297,7 +297,7 @@ class Obstacles {
         this.counter = 0;
         this.erasable = 6000/this.speed;
         this.delete = false;
-        this.color = "rgb(51,51,51)";
+        this.color = "rgb(182,182,182)";
     }
     setDeletion() {
         this.counter += 1;
@@ -484,5 +484,4 @@ document.addEventListener("mousemove", setMousePosition, false);
 document.addEventListener("mousedown", mouseDown, false);
 document.addEventListener("mouseup", mouseUp, false);
 button1.addEventListener("mousedown", () => {game.start(1, "mainM")}, false);
-buttonBack.addEventListener("click", () => {game.back()}, false);
 gameovermenu.addEventListener("click", () => {game.newStart()}, false);
