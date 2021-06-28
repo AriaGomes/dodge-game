@@ -2,9 +2,12 @@
 simple game with HTML5, CSS3 and JavaScript
 * **-> no game framework**
 
-## controls:
-1. Player: mouse control
-1. Player: arrow keys
-1. Player: WASD keys
+## Changes:
+1. mouse control as the only way to dodge obstacles
+2. set pro mode to default as its more fun.
+3. removed the secret menu
+4. source code translated to english
+5. multiplayer mode removed as it didnt work properly
 
-### [play the game :)](https://fakiejohnny.github.io/dodge-game/)
+
+### [play the game :)](https://ariagomes.github.io/dodge-game/)
