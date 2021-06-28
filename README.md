@@ -10,6 +10,8 @@ simple game with HTML5, CSS3 and JavaScript
 5. multiplayer mode removed as it didnt work properly
 6. removed the cursor as i didnt like it
 7. removed back button as only one start option
+8. added dark theme
+9. translated code from German to English
 
 
-### [play the game :)](https://ariagomes.github.io/dodge-game/)
+### [play the game :)](https://ariagomes.github.io/dodge-game-singleplayer/)
